@@ -1,17 +1,9 @@
-const express = require('express');
+
 const inquirer = require('inquirer');
-const sequelize = require('./config/connection');
+const db = require('./db/connection');
+const table = require('console.table');
+const view = require('./routes/view')
 
-
-const app = express();
-const PORT = process.env.PORT || 3003;
-
-app.use(express.json());
-app.use(express.urlencoded({extended: true}));
-
-sequelize.sync({force: true}).then (() => {
-    app.listen(PORT, () => console.log (`Now listening on port ${PORT}`))
-});
 
 
 const start = () => {
@@ -32,19 +24,20 @@ const start = () => {
                 break;
 
             case 'View employee':
-                viewEmployee();
+                view.viewEmployee();
                 break;
                 
+
             case 'Update employee':
                 updateEmployee();
                 break;
 
             case 'Exit':
-                console.log('See you next time! Goodbye!');
-                  
+                console.table('See you next time! Goodbye!');
+                 db.end(); 
 
         }
     });
 }
- exports.start = start;
+ module.exports = start;
 start();
