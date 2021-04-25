@@ -2,8 +2,8 @@
 const inquirer = require('inquirer');
 const db = require('./db/connection');
 const table = require('console.table');
-const view = require('./routes/view')
-
+const view = require('./routes/view');
+const add = require('./routes/add');
 
 
 const start = () => {
@@ -20,7 +20,7 @@ const start = () => {
         switch (data.directory){
 
             case 'Add employee':
-                addEmployee();
+                add.addData();
                 break;
 
             case 'View employee':
@@ -39,5 +39,5 @@ const start = () => {
         }
     });
 }
- module.exports = start;
+ exports.start = start;
 start();

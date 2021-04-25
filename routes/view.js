@@ -12,7 +12,7 @@ const viewEmployee = () => {
         {
             type: 'list',
             message: 'What would you like to view?',
-            choices: ['View all employees', 'View Employee by Department', 'View Departments', 'View Positions', 'Exit'],
+            choices: ['View all employees', 'View Employee by Department', 'View Departments', 'View Positions', 'Main Menu', 'Exit'],
             name: 'view'
         }
     ).then((data) => {
@@ -34,6 +34,10 @@ const viewEmployee = () => {
             case 'View Positions':
                 byPosition();
                 break;
+
+            case 'Main Menu':
+                start.start();
+                break;    
 
             case 'Exit':
                 db.end();
