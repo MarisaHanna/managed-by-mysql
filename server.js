@@ -4,6 +4,7 @@ const db = require('./db/connection');
 const table = require('console.table');
 const view = require('./routes/view');
 const add = require('./routes/add');
+const update = require('./routes/update');
 
 
 const start = () => {
@@ -29,7 +30,7 @@ const start = () => {
                 
 
             case 'Update employee':
-                updateEmployee();
+                update.updateEmployee();
                 break;
 
             case 'Exit':
