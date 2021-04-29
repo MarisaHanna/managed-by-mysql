@@ -10,7 +10,7 @@ const updateEmployee = () => {
         {
             type: 'list',
             message: 'Would you like to update an employee\'s role?',
-            choices:['Yes, I am updating and employee', 'Back To Main Menu', 'Exit'],
+            choices:['Yes, I am updating an employee', 'Back To Main Menu', 'Exit'],
             name: 'update'
 
 
@@ -49,9 +49,10 @@ const updateNow = () => {
 
              inquirer.prompt([
 
-                {
-                    name: 'updateData',
-                    type: 'list',
+                 {
+                     name: 'updateData',
+                     type: 'list',
+                     message: 'What employee would you like to update?',
                     choices: function () {
                         let updateArray = [];
                         for (let i = 0; i < results.length; i++){
@@ -59,8 +60,6 @@ const updateNow = () => {
                         }
                             return updateArray;
                     },
-
-                    message: 'What employee would you like to update?',
                 },
                 {
                     name: 'newRole',

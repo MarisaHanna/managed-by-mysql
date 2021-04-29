@@ -126,6 +126,7 @@ const addDepartment = () => {
                 {
                 name: 'addDepot',
                 type: 'list',
+                message: 'What department will you be adding this role to?',
                 choices: function () {
                     let depoArray = [];
                     for (let i = 0; i < results.length; i++) {
@@ -133,7 +134,6 @@ const addDepartment = () => {
                     }
                         return depoArray;
             },
-                 message: 'What department will you be adding this role to?'
 
             },
             {
