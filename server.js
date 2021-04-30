@@ -19,27 +19,27 @@ const start = () => {
         {
          type: 'list',
          message: 'Hello! Please choose a directory below.',
-         choices: ['Add employee or role', 'View employee or role', 'Update employee or role', 'Delete employee or role', 'Exit'],
+         choices: ['Add Employee or Role', 'View Employee or Role', 'Update Employee or Role', 'Delete Employee or Role', 'Exit'],
          name: 'directory'  
         }
     ).then((data) => {
        
         switch (data.directory){
 
-            case 'Add employee or role':
+            case 'Add Employee or Role':
                 add.addData();
                 break;
 
-            case 'View employee or role':
+            case 'View Employee or Role':
                 view.viewEmployee();
                 break;
                 
 
-            case 'Update employee or role':
+            case 'Update Employee or Role':
                 update.updateEmployee();
                 break;
 
-            case 'Delete employee or role':
+            case 'Delete Employee or Role':
                 deleteData.deleteEmployee();
                 break;    
 

@@ -87,7 +87,7 @@ const deleteDepot = () =>{
 
 const deleteRole = () => {
 
-    const query = `SELECT * FROM role`;
+    const query = `SELECT * FROM roles`;
     db.query(query, (err, results) => {
 
         if (err){
@@ -113,7 +113,7 @@ const deleteRole = () => {
 
         ]).then((data) => {
             db.query(
-                `DELETE FROM role WHERE ?`,
+                `DELETE FROM roles WHERE ?`,
 
                 {
                     title: data.deleteRole

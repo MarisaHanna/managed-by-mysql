@@ -18,7 +18,7 @@ const updateEmployee = () => {
 
          switch (data.update){
 
-            case 'Yes, I am updating and employee':
+            case 'Yes, I am updating an employee':
                  updateNow();
                  break;
 
@@ -53,14 +53,14 @@ const updateNow = () => {
                      name: 'updateData',
                      type: 'list',
                      message: 'What employee would you like to update?',
-                    choices: function () {
-                        let updateArray = [];
-                        for (let i = 0; i < results.length; i++){
-                            updateArray.push(results[i].last_name);
-                        }
+                     choices: function () {
+                         let updateArray = [];
+                         for (let i = 0; i < results.length; i++){
+                             updateArray.push(results[i].last_name);
+                            }
                             return updateArray;
+                        },
                     },
-                },
                 {
                     name: 'newRole',
                     type: 'list',
@@ -74,9 +74,9 @@ const updateNow = () => {
                         let deleteRoles = new Set(jobRoles);
                         let newJob = [...deleteRoles];
                         return newJob;
-                         
+                        
                     },
-
+                    
                 }
                 ]).then((data) => {
                     db.query(
