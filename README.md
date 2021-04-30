@@ -9,13 +9,13 @@
 #   Images
 
 
+![giphy](./images/giphy.gif)
 ![screen-shot](./images/screen-shot.png)
-![]()
 
 
 #   Video Link
 
-[]()
+[YouTube Link](https://youtu.be/lmRnt4YpCO4)
 
 
 
@@ -41,7 +41,6 @@
 
     *Open your command line
     *Run npm i
-    *Run seed folder
     *Run npm start
 
 
