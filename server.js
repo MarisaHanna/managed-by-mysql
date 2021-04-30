@@ -6,6 +6,11 @@ const view = require('./Develop/view');
 const add = require('./Develop/add');
 const update = require('./Develop/update');
 const deleteData = require('./Develop/delete');
+const figlet = require('figlet');
+const chalk = require('chalk');
+
+
+ console.log(chalk.blueBright (figlet.textSync('Welcome To Your \n Business Database!', { horizontalLayout: 'full', verticalLayout: 'full'})));
 
 
 const start = () => {
@@ -46,4 +51,4 @@ const start = () => {
     });
 }
  exports.start = start;
-start();
+ start();
